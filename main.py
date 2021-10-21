@@ -12,13 +12,12 @@ button = ClickableTurtle()
 
 #set up players
 player_1 = KeyboardTurtle(window)
-player_2 = KeyboardTurtle(window, "w", "d")
 
-player_1.goto(100,0)
+
+player_1.goto(-350,200)
 
 # set target of other player(our collison check) to the opposite player
-player_1.other_player = player_2
-player_2.other_player = player_1
+
 
 
 # This is needed to listen for inputs
