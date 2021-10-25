@@ -1,32 +1,29 @@
 from turtle import Screen
-from keyboardturtle import KeyboardTurtle
 from clickableturtle import ClickableTurtle
-
+from keyboardturtle import KeyboardTurtle
+from wall import Wall
 
 # set up instance of the screen
 window = Screen()
-window.setup(800, 500)
 
-# set up clickable instance
-button = ClickableTurtle()
+#window.addshape(image)
+screen_width = 600
+screen_height = 400
+window.setup(screen_width, screen_height)
+
+#list setup
+wall_list = []
+
 
 #set up players
-player_1 = KeyboardTurtle(window)
+player_1 = KeyboardTurtle(window, walls = wall_list)
 
+w1 = Wall(100,0,1,3)
+wall_list.append(w1)
+wall_list.appendwall(0, 100, 5, 1)
 
-player_1.goto(-350,200)
-
-# set target of other player(our collison check) to the opposite player
-
-
-
-# This is needed to listen for inputs
+# This is needed at the end to listen for inputs
 window.listen()
 window.mainloop()
 
 
-# be CAREFUL. We aren't controlling the screen draws in this program, so NO while True loops
-
-#TODO:  Check the classes and complete TODOs
-#push to github repo.
-#link repo to assignment

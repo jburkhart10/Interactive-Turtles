@@ -14,7 +14,9 @@ class KeyboardTurtle(Turtle):
     self.window = window
     self.straight = straight
     self.turn_right = turn_right
+    self.turn_left = turn_left
     self.other_player = other_player
+    self.walls = walls
 
     #set turtle starting states
     self.shape("turtle")
